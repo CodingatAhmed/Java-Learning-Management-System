@@ -1,6 +1,7 @@
 package Services.AssignmentNQuizSystem.RecordsList.AssignmentQuestionsList;
 
 import Services.AssignmentNQuizSystem.Classes.Assignments.Assignment;
+import Services.AssignmentNQuizSystem.Classes.Quizzes.Quiz;
 
 public class AssignmentQuestionsList {
     private Assignment[] AssignmentQuestions;
@@ -18,7 +19,7 @@ public class AssignmentQuestionsList {
 
     public AssignmentQuestionsList(AssignmentQuestionsList otherAssignmentQsList) {
         this.AssignmentQuestions = new Assignment[otherAssignmentQsList.AssignmentQuestions.length];
-        for (int i = 0; i< otherAssignmentQsList.AssignmentQuestions.length; i++) {
+        for (int i = 0; i < otherAssignmentQsList.AssignmentQuestions.length; i++) {
             this.AssignmentQuestions[i] = otherAssignmentQsList.AssignmentQuestions[i];
         }
         this.totalQuestions = 0;
@@ -26,12 +27,17 @@ public class AssignmentQuestionsList {
 
     public boolean AddQuestion(Assignment addQuestion) {
         if (this.totalQuestions < AssignmentQuestions.length) {
-            AssignmentQuestions[this.totalQuestions] = new Assignment(addQuestion); 
+            AssignmentQuestions[this.totalQuestions] = new Assignment(addQuestion);
             this.totalQuestions += 1;
             return true;
-        }
-        else {
+        } else {
             return false;
+        }
+    }
+
+    public void IterateAllQuizQuestions() {
+        for (Assignment AssignmentQuestion : this.AssignmentQuestions) {
+            System.out.println(AssignmentQuestion);
         }
     }
 
