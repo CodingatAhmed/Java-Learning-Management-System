@@ -70,8 +70,8 @@ public class Course implements GetCourseDetails, SetCourseDetails, Cloneable {
 
     // @Override
     // public Object clone() throws CloneNotSupportedException {
-    //     Course cloneCourse = (Course) super.clone();
-    //     return cloneCourse;
+    // Course cloneCourse = (Course) super.clone();
+    // return cloneCourse;
     // };
 
 }
