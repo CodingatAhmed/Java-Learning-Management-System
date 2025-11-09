@@ -62,11 +62,12 @@ public abstract class User implements Cloneable, GetUserInfo, SetUserInfo, userS
 
     @Override
     public void loginUser() {
-
+        System.out.println("User logged in Successfully");
     };
 
     @Override
     public void logoutUser() {
+        System.out.println("User logged out Successfully");
 
     };
 

@@ -1,7 +1,5 @@
 package Services.UserManagement.UsersList;
 
-import Services.CourseManagement.Classes.Courses.Course;
-
 // import java.util.ArrayList;
 
 import Services.UserManagement.Classes.User.User;
