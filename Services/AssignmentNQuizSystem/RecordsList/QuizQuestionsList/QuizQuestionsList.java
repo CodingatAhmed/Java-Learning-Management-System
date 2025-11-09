@@ -20,7 +20,7 @@ public class QuizQuestionsList {
 
     public QuizQuestionsList(QuizQuestionsList otherAssignmentQsList) {
         this.QuizQuestions = new Quiz[otherAssignmentQsList.QuizQuestions.length];
-        for (int i = 0; i< otherAssignmentQsList.QuizQuestions.length; i++) {
+        for (int i = 0; i < otherAssignmentQsList.QuizQuestions.length; i++) {
             this.QuizQuestions[i] = otherAssignmentQsList.QuizQuestions[i];
         }
         this.totalQuestions = 0;
@@ -28,12 +28,17 @@ public class QuizQuestionsList {
 
     public boolean AddQuestion(Quiz addQuestion) {
         if (this.totalQuestions < QuizQuestions.length) {
-            QuizQuestions[this.totalQuestions] = new Quiz(addQuestion); 
+            QuizQuestions[this.totalQuestions] = new Quiz(addQuestion);
             this.totalQuestions += 1;
             return true;
-        }
-        else {
+        } else {
             return false;
+        }
+    }
+
+    public void IterateAllQuizQuestions() {
+        for (Quiz QuizQuestions : this.QuizQuestions) {
+            System.out.println(QuizQuestions);
         }
     }
 }

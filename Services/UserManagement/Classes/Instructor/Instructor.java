@@ -10,9 +10,9 @@ public class Instructor extends User {
         this.InstructorName = "";
     }
 
-    public Instructor(String userId, String userEmail, String userPass, String AdminName) {
+    public Instructor(String userId, String userEmail, String userPass, String InstructorName) {
         super(userId, userEmail, userPass);
-        this.InstructorName = AdminName;
+        this.InstructorName = InstructorName;
 
     }
 
