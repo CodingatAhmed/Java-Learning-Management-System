@@ -1,12 +1,6 @@
 package Services.AssignmentNQuizSystem.Classes.Quizzes.QuizHeader;
 
 import java.util.Objects;
-
-import Services.AssignmentNQuizSystem.Classes.Quizzes.Quiz;
-// package Services.AssignmentNQuizSystem.Classes.Quizzes.QuizHeader;
-// package Services.AssignmentNQuizSystem.Classes.Quizzes.QuizQuestion;
-import Services.AssignmentNQuizSystem.Interfaces.AssignmentInterfaces.AssignmentHeaderInterface.GetAssignmentHeaderDetails;
-import Services.AssignmentNQuizSystem.Interfaces.AssignmentInterfaces.AssignmentHeaderInterface.SetAssignmentHeaderDetails;
 import Services.AssignmentNQuizSystem.Interfaces.QuizInterfaces.QuizHeaderInterface.GetQuizHeaderDetails;
 import Services.AssignmentNQuizSystem.Interfaces.QuizInterfaces.QuizHeaderInterface.SetQuizHeaderDetails;
 
@@ -78,7 +72,6 @@ public class QuizHeader implements GetQuizHeaderDetails, SetQuizHeaderDetails {
             return false;
         QuizHeader OtherQuizHeader = (QuizHeader) otherHeader;
         return Objects.equals(this.QuizID, OtherQuizHeader.QuizID);
-        // return Objects.deepEquals(otherHeader, quizHeader)
     }
 
     @Override

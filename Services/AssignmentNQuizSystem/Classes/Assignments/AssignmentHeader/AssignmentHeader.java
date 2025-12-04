@@ -1,8 +1,6 @@
 package Services.AssignmentNQuizSystem.Classes.Assignments.AssignmentHeader;
 
 import java.util.Objects;
-
-import Services.AssignmentNQuizSystem.Classes.Quizzes.QuizHeader.QuizHeader;
 import Services.AssignmentNQuizSystem.Interfaces.AssignmentInterfaces.AssignmentHeaderInterface.GetAssignmentHeaderDetails;
 import Services.AssignmentNQuizSystem.Interfaces.AssignmentInterfaces.AssignmentHeaderInterface.SetAssignmentHeaderDetails;
 
@@ -74,7 +72,6 @@ public class AssignmentHeader implements GetAssignmentHeaderDetails, SetAssignme
             return false;
         AssignmentHeader OtherAssignmentHeader = (AssignmentHeader) otherHeader;
         return Objects.equals(this.AssignmentID, OtherAssignmentHeader.AssignmentID);
-        // return Objects.deepEquals(otherHeader, quizHeader)
     }
 
     @Override

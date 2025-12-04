@@ -5,7 +5,6 @@ import java.util.Objects;
 import Services.CourseManagement.Interfaces.GetCourseDetails;
 import Services.CourseManagement.Interfaces.SetCourseDetails;
 import Services.UserManagement.Classes.Instructor.Instructor;
-import Services.UserManagement.Classes.User.User;
 
 public class Course implements GetCourseDetails, SetCourseDetails, Cloneable {
     private String courseName;
@@ -80,11 +79,4 @@ public class Course implements GetCourseDetails, SetCourseDetails, Cloneable {
         return "The Course Name is " + this.courseName + " ,the Course Code is " + this.courseCode + " , "
                 + this.courseInstructor;
     }
-
-    // @Override
-    // public Object clone() throws CloneNotSupportedException {
-    // Course cloneCourse = (Course) super.clone();
-    // return cloneCourse;
-    // };
-
 }

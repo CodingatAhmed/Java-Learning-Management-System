@@ -3,32 +3,20 @@ package Services.AssignmentNQuizSystem.RecordsList.AssignmentsList;
 import java.util.*;
 
 import Services.AssignmentNQuizSystem.Classes.Assignments.Assignment;
-import Services.AssignmentNQuizSystem.Classes.Quizzes.Quiz;
-import Services.AssignmentNQuizSystem.RecordsList.AssignmentQuestionsList.AssignmentQuestionsList;
-import Services.AssignmentNQuizSystem.RecordsList.QuizzesList.QuizzesList;
-// import Services.CourseManagement.Classes.Courses.Course;
 import Services.CourseManagement.Classes.Courses.Course;
-import Services.UserManagement.UsersList.UsersList;
 
 public class AssignmentsList {
-    // private List<Assignment> AllAssignmentsList = new ArrayList<>();
     private Map<Course, List<Assignment>> AllAssignmentsList = new HashMap<>();
     private static int totalAssignments;
-    // private Course courseAssignment;
 
     public AssignmentsList() {
-        // this.AllAssignmentsList = new Assignment[0];
         AssignmentsList.totalAssignments = 0;
     }
 
     public AssignmentsList(int totalAssignments, Map<Course, List<Assignment>> otherAssignments) {
-        // this.AllAssignmentsList = new Assignment[totalAssignments];
-        // Assignment GetAssignmentObject;
-        // AssignmentsList.totalAssignments += totalAssignments;
         for (Course GetCourse : otherAssignments.keySet()) {
             List<Assignment> GetAssignmentList = otherAssignments.get(GetCourse);
             List<Assignment> OriginalAssignmentList = new ArrayList<>(GetAssignmentList);
-            // GetAssignmentObject = otherAssignments.get(GetCourse);
             this.AllAssignmentsList.putIfAbsent(GetCourse, OriginalAssignmentList);
         }
     }
@@ -41,13 +29,6 @@ public class AssignmentsList {
             this.AllAssignmentsList.put(GetCourse, OriginalAssignmentList);
 
         }
-
-        // this.AllAssignmentsList = new
-        // Assignment[otherAssignmentsList.AllAssignmentsList.length];
-        // for (int i = 0; i < otherAssignmentsList.AllAssignmentsList.size(); i++) {
-        // this.AllAssignmentsList.add(otherAssignmentsList.AllAssignmentsList.get(i));
-        // AssignmentsList.totalAssignments += 1;
-        // }
     }
 
     public boolean AddAssignment(Course newCourse, Assignment newAssignment) {
@@ -65,15 +46,6 @@ public class AssignmentsList {
             System.out.println("This Quiz Already exists for the Course " + newCourse.GetCourseCode());
             return false;
         }
-        // try {
-        // this.AllAssignmentsList.put(newCourse, newAssignment);
-        // // AllAssignmentsList.add(newAssignment);
-        // AssignmentsList.totalAssignments += 1;
-        // return true;
-        // } catch (Exception e) {
-        // // TODO: handle exception
-        // return false;
-        // }
     }
 
     public boolean RemoveAssignment(Course newCourse, Assignment newAssignment) {
@@ -96,7 +68,7 @@ public class AssignmentsList {
         }
     }
 
-    public void IterateCourseQuizzes(Course newCourse) {
+    public void IterateCourseAssignments(Course newCourse) {
         System.out.println(
                 "There are total of " + this.AllAssignmentsList.get(newCourse).size() + " Assignments for the Course "
                         + newCourse.GetCourseCode());
@@ -107,7 +79,7 @@ public class AssignmentsList {
 
     public void IterateAllCourseAssignments() {
         for (Course GetCourse : this.AllAssignmentsList.keySet()) {
-            this.IterateCourseQuizzes(GetCourse);
+            this.IterateCourseAssignments(GetCourse);
         }
     }
 

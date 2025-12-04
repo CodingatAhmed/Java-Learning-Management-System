@@ -1,18 +1,10 @@
 package Services.AssignmentNQuizSystem.Classes.Assignments;
 
-import java.lang.*;
 import java.util.*;
-
 import Services.AssignmentNQuizSystem.Classes.Assignments.AssignmentHeader.AssignmentHeader;
 import Services.AssignmentNQuizSystem.Classes.Assignments.AssignmentQuestion.AssignmentQuestion;
-// import Services.AssignmentNQuizSystem.Interfaces.AssignmentInterfaces.AssignmentHeaderInterface.GetAssignmentHeaderDetails;
-// import Services.AssignmentNQuizSystem.Interfaces.AssignmentInterfaces.AssignmentHeaderInterface.SetAssignmentHeaderDetails;
-import Services.AssignmentNQuizSystem.Classes.Quizzes.Quiz;
-import Services.AssignmentNQuizSystem.Classes.Quizzes.QuizHeader.QuizHeader;
-import Services.AssignmentNQuizSystem.Classes.Quizzes.QuizQuestion.QuizQuestion;
 
 public class Assignment {
-    // private int Marks;
     private AssignmentHeader assignmentHeader;
     private ArrayList<AssignmentQuestion> allQuestionsList = new ArrayList<>();
 
@@ -33,9 +25,6 @@ public class Assignment {
         for (AssignmentQuestion eachQuestion : otherAssignment.allQuestionsList) {
             this.allQuestionsList.add(eachQuestion);
         }
-        // this.AssignmentTitle = otherAssignment.AssignmentTitle;
-        // this.AssignmentMarks = otherAssignment.AssignmentMarks;
-        // this.AssignmentDate = otherAssignment.AssignmentDate;
     }
 
     public AssignmentHeader GetAssignmentHeader() {
@@ -55,7 +44,6 @@ public class Assignment {
             return false;
         Assignment OtherAssignment = (Assignment) otherAssignment;
         return Objects.equals(this.GetAssignmentHeader(), OtherAssignment.GetAssignmentHeader());
-        // return Objects.deepEquals(otherHeader, quizHeader)
     }
 
     public boolean AddAssignmentQuestion(AssignmentQuestion addQuestion) {
@@ -65,38 +53,8 @@ public class Assignment {
         } catch (Exception e) {
             e.printStackTrace();
             return false;
-            // TODO: handle exception
         }
     }
-    // @Override
-    // public String GetAssignmentTitle() {
-    // return this.AssignmentTitle;
-    // };
-
-    // @Override
-    // public int GetAssignmentMarks() {
-    // return this.AssignmentMarks;
-    // };
-
-    // @Override
-    // public String GetAssignmentDeadLine() {
-    // return this.AssignmentDate;
-    // };
-
-    // @Override
-    // public void SetAssignmentTitle(String AssignmentTitle) {
-    // this.AssignmentTitle = AssignmentTitle;
-    // };
-
-    // @Override
-    // public void SetAssignmentMarks(int AssignmentMarks) {
-    // this.AssignmentMarks = AssignmentMarks;
-    // };
-
-    // @Override
-    // public void SetAssignmentDeadLine(String AssignmentDate) {
-    // this.AssignmentDate = AssignmentDate;
-    // };
 
     public void IterateHeaderDetails() {
         System.out.println(this.assignmentHeader);

@@ -1,11 +1,6 @@
 package Services.AssignmentNQuizSystem.Classes.Quizzes.QuizQuestion;
 
 import java.util.Objects;
-
-import Services.AssignmentNQuizSystem.Classes.Assignments.AssignmentHeader.AssignmentHeader;
-import Services.AssignmentNQuizSystem.Classes.Quizzes.*;
-import Services.AssignmentNQuizSystem.Interfaces.AssignmentInterfaces.AssignmentQuestionInterface.GetAssignmentQuestionDetails;
-import Services.AssignmentNQuizSystem.Interfaces.AssignmentInterfaces.AssignmentQuestionInterface.SetAssignmentQuestionDetails;
 import Services.AssignmentNQuizSystem.Interfaces.QuizInterfaces.QuizQuestionInterface.GetQuizQuestionDetails;
 import Services.AssignmentNQuizSystem.Interfaces.QuizInterfaces.QuizQuestionInterface.SetQuizQuestionDetails;
 

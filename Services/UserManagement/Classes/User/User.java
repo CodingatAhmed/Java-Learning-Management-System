@@ -1,11 +1,7 @@
 package Services.UserManagement.Classes.User;
 
 import java.util.Objects;
-
-import Services.AssignmentNQuizSystem.Classes.Quizzes.Quiz;
-import Services.UserManagement.Classes.Student.Student;
 import Services.UserManagement.Interfaces.*;
-// import Services.UserManagement.Interfaces;
 
 public abstract class User implements Cloneable, GetUserInfo, SetUserInfo, userSession {
     private String userID;

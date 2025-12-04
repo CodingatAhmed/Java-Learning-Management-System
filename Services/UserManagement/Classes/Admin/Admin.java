@@ -6,12 +6,12 @@ public class Admin extends User {
     private String AdminName;
 
     public Admin() {
-        super("","","");
+        super("", "", "");
         this.AdminName = "";
     }
 
     public Admin(String userId, String userEmail, String userPass, String AdminName) {
-        super(userId,userEmail,userPass);
+        super(userId, userEmail, userPass);
         this.AdminName = AdminName;
 
     }
@@ -25,31 +25,31 @@ public class Admin extends User {
     public String GetUserId() {
         return super.GetUserId();
     };
-    
+
     @Override
     public String GetUserEmail() {
-        return super.GetUserEmail();    
+        return super.GetUserEmail();
     };
-    
+
     @Override
     public String GetUserPassword() {
-        return super.GetUserPassword();  
+        return super.GetUserPassword();
     };
-    
+
     public String GetAdminName() {
         return this.AdminName;
     }
-    
+
     @Override
     public void SetUserId(String userId) {
         super.SetUserId(userId);
     };
-    
+
     @Override
     public void SetUserEmail(String userEmail) {
         super.SetUserEmail(userEmail);
     };
-    
+
     @Override
     public void SetUserPassword(String userPassword) {
         super.SetUserPassword(userPassword);
@@ -61,6 +61,7 @@ public class Admin extends User {
 
     @Override
     public String toString() {
-        return "The Admin Name is " + this.AdminName + " and the Admin UserID is " + this.GetUserId() + " and Admin Email is " + this.GetUserEmail();
+        return "The Admin Name is " + this.AdminName + " and the Admin UserID is " + this.GetUserId()
+                + " and Admin Email is " + this.GetUserEmail();
     }
 }

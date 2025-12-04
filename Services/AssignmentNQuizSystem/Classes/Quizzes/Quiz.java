@@ -1,21 +1,10 @@
 package Services.AssignmentNQuizSystem.Classes.Quizzes;
 
-import Services.AssignmentNQuizSystem.Interfaces.QuizInterfaces.GetQuizDetails;
-import Services.AssignmentNQuizSystem.Interfaces.QuizInterfaces.SetQuizDetails;
-
-import java.lang.*;
 import java.util.*;
-
-import Services.AssignmentNQuizSystem.Classes.Assignments.AssignmentHeader.AssignmentHeader;
-import Services.AssignmentNQuizSystem.Classes.Assignments.AssignmentQuestion.AssignmentQuestion;
 import Services.AssignmentNQuizSystem.Classes.Quizzes.QuizHeader.*;
 import Services.AssignmentNQuizSystem.Classes.Quizzes.QuizQuestion.*;
-// import Services.AssignmentNQuizSystem.Classes.Quizzes.*;
-// import Services.AssignmentNQuizSystem.Interfaces.AssignmentInterfaces.AssignmentHeaderInterface.GetAssignmentHeaderDetails;
-// import Services.AssignmentNQuizSystem.Interfaces.AssignmentInterfaces.AssignmentHeaderInterface.SetAssignmentHeaderDetails;
 
 public class Quiz {
-    // private int Marks;
     private QuizHeader QuizHeader;
     private ArrayList<QuizQuestion> allQuestionsList = new ArrayList<>();
 
@@ -36,9 +25,6 @@ public class Quiz {
         for (QuizQuestion eachQuestion : otherQuiz.allQuestionsList) {
             this.allQuestionsList.add(eachQuestion);
         }
-        // this.AssignmentTitle = otherAssignment.AssignmentTitle;
-        // this.AssignmentMarks = otherAssignment.AssignmentMarks;
-        // this.AssignmentDate = otherAssignment.AssignmentDate;
     }
 
     public QuizHeader GetQuizHeader() {
@@ -58,7 +44,6 @@ public class Quiz {
             return false;
         Quiz OtherQuiz = (Quiz) otherQuiz;
         return Objects.equals(this.GetQuizHeader(), OtherQuiz.GetQuizHeader());
-        // return Objects.deepEquals(otherHeader, quizHeader)
     }
 
     public boolean AddQuizQuestion(QuizQuestion addQuestion) {
@@ -68,7 +53,6 @@ public class Quiz {
         } catch (Exception e) {
             e.printStackTrace();
             return false;
-            // TODO: handle exception
         }
     }
 
@@ -86,7 +70,6 @@ public class Quiz {
         } catch (Exception e) {
             e.printStackTrace();
             return false;
-            // TODO: handle exception
         }
     }
 
