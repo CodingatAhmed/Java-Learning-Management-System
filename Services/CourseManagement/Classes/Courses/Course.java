@@ -1,14 +1,16 @@
 package Services.CourseManagement.Classes.Courses;
 
+import java.util.Objects;
+
 import Services.CourseManagement.Interfaces.GetCourseDetails;
 import Services.CourseManagement.Interfaces.SetCourseDetails;
 import Services.UserManagement.Classes.Instructor.Instructor;
+import Services.UserManagement.Classes.User.User;
 
 public class Course implements GetCourseDetails, SetCourseDetails, Cloneable {
     private String courseName;
     private String courseCode;
     private Instructor courseInstructor;
-    // private String courseN;
 
     public Course() {
         this.courseName = "";
@@ -61,6 +63,17 @@ public class Course implements GetCourseDetails, SetCourseDetails, Cloneable {
         this.courseInstructor = new Instructor(CourseInstructor);
 
     };
+
+    @Override
+    public boolean equals(Object otherCourse) {
+        if (this == otherCourse) {
+            return true;
+        }
+        if (!(otherCourse instanceof Course))
+            return false;
+        Course OtherCourse = (Course) otherCourse;
+        return Objects.equals(this.GetCourseCode(), OtherCourse.GetCourseCode());
+    }
 
     @Override
     public String toString() {

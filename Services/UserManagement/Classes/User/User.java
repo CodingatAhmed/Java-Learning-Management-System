@@ -1,5 +1,9 @@
 package Services.UserManagement.Classes.User;
 
+import java.util.Objects;
+
+import Services.AssignmentNQuizSystem.Classes.Quizzes.Quiz;
+import Services.UserManagement.Classes.Student.Student;
 import Services.UserManagement.Interfaces.*;
 // import Services.UserManagement.Interfaces;
 
@@ -62,12 +66,12 @@ public abstract class User implements Cloneable, GetUserInfo, SetUserInfo, userS
 
     @Override
     public void loginUser() {
-        System.out.println("User logged in Successfully");
+        System.out.println("User with UserID " + this.userID + " logged in Successfully");
     };
 
     @Override
     public void logoutUser() {
-        System.out.println("User logged out Successfully");
+        System.out.println("User with UserID " + this.userID + " logged out Successfully");
 
     };
 
@@ -77,4 +81,14 @@ public abstract class User implements Cloneable, GetUserInfo, SetUserInfo, userS
         return cloneUser;
     };
 
+    @Override
+    public boolean equals(Object otherUser) {
+        if (this == otherUser) {
+            return true;
+        }
+        if (!(otherUser instanceof User))
+            return false;
+        User OtherUser = (User) otherUser;
+        return Objects.equals(this.userID, OtherUser.userID);
+    }
 }
