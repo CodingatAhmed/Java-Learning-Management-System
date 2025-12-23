@@ -1,28 +1,26 @@
 package Main;
 
-import Services.UserManagement.Classes.Instructor.Instructor;
-import Services.UserManagement.Classes.Student.Student;
-import Services.UserManagement.Classes.User.User;
-import Services.UserManagement.UsersList.UsersList;
-
-import java.util.*;
-
-import Services.AssignmentNQuizSystem.Classes.Assignments.Assignment;
-import Services.AssignmentNQuizSystem.Classes.Assignments.AssignmentHeader.AssignmentHeader;
-import Services.AssignmentNQuizSystem.Classes.Assignments.AssignmentQuestion.AssignmentQuestion;
-import Services.CourseManagement.Classes.Courses.Course;
+import Services.AssignmentNQuizSystem.RecordsList.AssignmentsList.AssignmentsList;
+import Services.AssignmentNQuizSystem.RecordsList.QuizzesList.QuizzesList;
 import Services.CourseManagement.CoursesList.CoursesList;
+// import Services.UserManagement.Classes.Student.Student;
+import Services.UserManagement.UsersList.UsersList;
 
 public class Main {
     public static void main(String[] args) {
-        Student newStudent = new Student("B24110006014", "a@gmail.com", "a2005",
-                "Ahmed");
-        Student newStudent1 = new Student("B24110006086", "a@gmail.com", "a2005",
-                "Arham");
         UsersList ListUsers = new UsersList();
-        ListUsers.AddUser(newStudent);
-        ListUsers.RemoveUser("B24110006014");
-        ListUsers.AddUser(newStudent);
+        CoursesList newCoursesList = new CoursesList();
+        AssignmentsList newAssignmentsList = new AssignmentsList();
+        QuizzesList newQuizzesList = new QuizzesList();
+
+        // Student newStudent = new Student("B24110006014", "a@gmail.com", "a2005",
+        // "Ahmed");
+        // Student newStudent1 = new Student("B24110006086", "a@gmail.com", "a2005",
+        // "Arham");
+        // UsersList ListUsers = new UsersList();
+        // ListUsers.AddUser(newStudent);
+        // ListUsers.AddUser(newStudent1);
+        // ListUsers.RemoveUser("B24110006014");
         // ListUsers.AddUser(newStudent1);
         // System.out.println(ListUsers.GetUser("B2411000601"));
         // ListUsers.RemoveUser("B24110006013");
@@ -58,14 +56,6 @@ public class Main {
         // AssignmentQuestion Question2 = new AssignmentQuestion("what is shallow and
         // deep copy", 5);
         // Assignment newAssignment = new Assignment(newAssignmentTitle);
-        // newAssignment.ne
-        // newAssignment.AddAssignmentQuestion(Question1);
-        // newAssignment.AddAssignmentQuestion(Question2);
-        // System.out.println(newAssignment);
-        // List<String> myString = new ArrayList<>();
-        // myString.add("Hello");
-        // myString.add("World");
-        // System.out.println(myString);
 
     }
 }
